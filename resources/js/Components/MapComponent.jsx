@@ -16,19 +16,21 @@ const MapComponent = ({ onLocationSelect }) => {
   };
 
   return (
-    <MapContainer center={[51.505, -0.09]} zoom={3} style={{ height: '400px', width: '100%' }}>
+    <div>
+    <MapContainer center={[51.505, -0.09]} zoom={3} style={{ height: '30em', width: '30em' }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
       <MapClickHandler />
-      {position && (
+
+    </MapContainer>
+    {position && (
         <div>
           <p>Latitude: {position.lat}</p>
           <p>Longitude: {position.lng}</p>
         </div>
       )}
-    </MapContainer>
+    </div>
   );
 };
 
