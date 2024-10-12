@@ -25,9 +25,8 @@ const WeatherApp = ({ openWeatherApiKey }) => {
             }
             }catch (err) {
         setError('Failed to fetch weather data. Please try again.');
-        } finally {() => {
+        } finally {
         setLoading(false);
-            }
         }
     };
 
